@@ -5,6 +5,8 @@ import ListaUsuarios from "./listaUsuarios";
 import Usuario from "@/data/model/Usuario";
 import FormUsuario from "./formUsuario";
 import Id from "@/data/model/Id";
+import Toastify, { toast } from "./notification";
+
 
 export default function CadastroUsuario() {
   const [usuarioAtual, setUsuarioAtual] = useState<Partial<Usuario> | null>(
@@ -17,21 +19,27 @@ export default function CadastroUsuario() {
       (u) => u.id !== usuarioRemover.id
     );
     setUsuarios(usuariosAtualizados);
+    
+    toast.success(`Usuário(a) ${usuarioRemover.nome} excluido com sucesso!`)
   }
   function selecionarUsuario(usuarioAtual: Partial<Usuario>) {
     setUsuarioAtual(usuarioAtual);
   }
-
   function salvarUsuario(){
     const usuarioExistente = usuarios.find(u => u.id === usuarioAtual?.id)
+    
     if(usuarioExistente){
       const novosUsuarios = usuarios.map(u => {
         return u.id === usuarioAtual?.id ? usuarioAtual : u;
       })
       setUsuarios(novosUsuarios as Usuario[])
+
+      toast.info(`Usuário ${usuarioAtual?.nome} atualizado!`)
     } else {
       setUsuarios([...usuarios, usuarioAtual as Usuario])
+      toast.success(`Usuário ${usuarioAtual?.nome} cadastrado!`)
     }
+    
     setUsuarioAtual(null)
   }
   function cancel() {
@@ -48,6 +56,7 @@ export default function CadastroUsuario() {
           Formulário e lista de usuários cadastrados
         </span>
       </header>
+      <Toastify />
       <div className="flex flex-col gap-5">
         <button
           className="botao verde self-end"
