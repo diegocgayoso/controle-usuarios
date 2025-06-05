@@ -1,0 +1,148 @@
+import { v4 as uuidv4 } from 'uuid'; // Importa a função v4 do uuid para gerar UUIDs
+import Usuario from '../model/Usuario';
+import Id from '../model/Id';
+
+const usuarios: Usuario[] = [
+  {
+    id: Id.novo(),
+    nome: 'Ana Silva',
+    email: 'ana.silva@example.com',
+    senha: 'senha123',
+    cargo: 'Desenvolvedor Pleno',
+  },
+  {
+    id: Id.novo(),
+    nome: 'Bruno Costa',
+    email: 'bruno.costa@example.com',
+    senha: 'senha456',
+    cargo: 'Designer UX/UI',
+  },
+  {
+    id: Id.novo(),
+    nome: 'Carla Dias',
+    email: 'carla.dias@example.com',
+    senha: 'senha789',
+    cargo: 'Gerente de Projetos',
+  },
+  {
+    id: Id.novo(),
+    nome: 'Daniel Souza',
+    email: 'daniel.souza@example.com',
+    senha: 'senhaabc',
+    cargo: 'Analista de Dados',
+  },
+  {
+    id: Id.novo(),
+    nome: 'Eduarda Lima',
+    email: 'eduarda.lima@example.com',
+    senha: 'senhadef',
+    cargo: 'Especialista em Marketing',
+  },
+  {
+    id: Id.novo(),
+    nome: 'Felipe Martins',
+    email: 'felipe.martins@example.com',
+    senha: 'senhaghi',
+    cargo: 'Desenvolvedor Sênior',
+  },
+  {
+    id: Id.novo(),
+    nome: 'Giovana Santos',
+    email: 'giovana.santos@example.com',
+    senha: 'senhajkl',
+    cargo: 'Recrutador(a)',
+  },
+  {
+    id: Id.novo(),
+    nome: 'Hugo Pereira',
+    email: 'hugo.pereira@example.com',
+    senha: 'senhamno',
+    cargo: 'Analista de Suporte',
+  },
+  {
+    id: Id.novo(),
+    nome: 'Isabela Oliveira',
+    email: 'isabela.oliveira@example.com',
+    senha: 'senhapqr',
+    cargo: 'Coordenador(a) de RH',
+  },
+  {
+    id: Id.novo(),
+    nome: 'João Almeida',
+    email: 'joao.almeida@example.com',
+    senha: 'senhatuv',
+    cargo: 'Engenheiro(a) de Software',
+  },
+  {
+    id: Id.novo(),
+    nome: 'Larissa Rodrigues',
+    email: 'larissa.rodrigues@example.com',
+    senha: 'senhawxy',
+    cargo: 'UX Researcher',
+  },
+  {
+    id: Id.novo(),
+    nome: 'Marcelo Castro',
+    email: 'marcelo.castro@example.com',
+    senha: 'senha101',
+    cargo: 'Scrum Master',
+  },
+  {
+    id: Id.novo(),
+    nome: 'Natália Gomes',
+    email: 'natalia.gomes@example.com',
+    senha: 'senha202',
+    cargo: 'Product Owner',
+  },
+  {
+    id: Id.novo(),
+    nome: 'Otávio Fernandes',
+    email: 'otavio.fernandes@example.com',
+    senha: 'senha303',
+    cargo: 'Arquiteto(a) de Soluções',
+  },
+  {
+    id: Id.novo(),
+    nome: 'Patrícia Rocha',
+    email: 'patricia.rocha@example.com',
+    senha: 'senha404',
+    cargo: 'Especialista em SEO',
+  },
+  {
+    id: Id.novo(),
+    nome: 'Rafael Nunes',
+    email: 'rafael.nunes@example.com',
+    senha: 'senha505',
+    cargo: 'Analista Financeiro',
+  },
+  {
+    id: Id.novo(),
+    nome: 'Sofia Barros',
+    email: 'sofia.barros@example.com',
+    senha: 'senha606',
+    cargo: 'Consultor(a) de Vendas',
+  },
+  {
+    id: Id.novo(),
+    nome: 'Thiago Azevedo',
+    email: 'thiago.azevedo@example.com',
+    senha: 'senha707',
+    cargo: 'Desenvolvedor Front-end',
+  },
+  {
+    id: Id.novo(),
+    nome: 'Vitória Pires',
+    email: 'vitoria.pires@example.com',
+    senha: 'senha808',
+    cargo: 'Gerente de Contas',
+  },
+  {
+    id: Id.novo(),
+    nome: 'Wallace Mendes',
+    email: 'wallace.mendes@example.com',
+    senha: 'senha909',
+    cargo: 'Cientista de Dados',
+  },
+];
+
+export default usuarios;
